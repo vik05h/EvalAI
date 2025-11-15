@@ -57,7 +57,6 @@ coverage:
     
     # Third-party dependencies
     - "*/node_modules/*"           # Node.js dependencies
-    - "*/bower_components/*"       # Bower dependencies
     
     # Frontend (not Python)
     - "frontend_v2/"               # frontend v2 directory

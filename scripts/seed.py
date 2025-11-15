@@ -57,7 +57,7 @@ def check_database():
         print(
             "Are you sure you want to wipe the existing development database and reseed it? (Y/N)"
         )
-        if settings.TEST or input().lower() == "y":
+        if settings.TEST or os.getenv("AUTO_SEED", "false") == "true":
             destroy_database()
             return True
         else:

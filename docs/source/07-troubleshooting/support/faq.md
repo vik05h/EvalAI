@@ -115,12 +115,6 @@ sudo apt-get install libpq-dev
 npm install -g gulp-cli
 ```
 
-### Q. `bower: command not found`
-
-```
-npm install -g bower
-```
-
 ### Q. Mocha reporter not loading:
 
 ```
@@ -154,9 +148,8 @@ TypeError: Cannot read properly 'apply of undefined'
 Fix:
 
 ```
-rm -rf node_modules/ bower_components
+rm -rf node_modules/
 npm install
-bower install
 ```
 
 ## Proxy / Network Issues

@@ -79,18 +79,6 @@ Uninstall karma and then install
 npm uninstall -g generator-karma && npm install -g generator-angular.
 ```
 
-#### Q. While trying to execute `bower install`
-
-```
-bower: command not found
-```
-
-Execute the following command first :
-
-```
-npm install -g bower
-```
-
 #### Q. While trying to execute `gulp dev:runserver`
 
 ```
@@ -254,9 +242,7 @@ Execute the following command:
 
 ```
 rm -rf node_modules/
-rm -rf bower_components
 npm install
-bower install
 ```
 
 #### Q. While trying to build EvalAI from the master branch and run the command docker-compose up:

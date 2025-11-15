@@ -10,11 +10,11 @@
     ]
   },
   "paths": {
-       "animate": "bower_components/animate.css/animate.css",
-       "angular-material": "bower_components/angular-material/angular-material.css",
-       "materialize": "bower_components/materialize/dist/css/materialize.css",
-       "AngularJS-Toaster": "bower_components/AngularJS-Toaster/toaster.min.css",
-       "trix": "bower_components/trix/dist/trix.css",
-       "moment-picker": "bower_components/angular-moment-picker/dist/angular-moment-picker.css"
+       "animate": "node_modules/animate.css/animate.css",
+       "angular-material": "node_modules/angular-material/angular-material.css",
+       "materialize": "node_modules/materialize-css/dist/css/materialize.css",
+       "AngularJS-Toaster": "node_modules/angularjs-toaster/toaster.min.css",
+       "trix": "node_modules/trix/dist/trix.css",
+       "moment-picker": "node_modules/angular-moment-picker/dist/angular-moment-picker.css"
       }
 }

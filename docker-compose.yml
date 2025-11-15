@@ -81,7 +81,6 @@ services:
     volumes:
       - .:/code
       - /code/node_modules
-      - /code/bower_components
     deploy:
       resources:
         limits:

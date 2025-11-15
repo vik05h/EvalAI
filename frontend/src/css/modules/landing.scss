@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 /*dynamic header style*/
 
 .dyn-header {
@@ -91,7 +93,6 @@ section.bg-section {
 .ev-details,
 .ev-reverse-details {
     position: relative;
-    box-shadow: 6px -1px 9px $super-light-shadow;
     padding: 0;
 }
 

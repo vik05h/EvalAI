@@ -26,7 +26,7 @@ RUN apt-get update && \
 WORKDIR /code
 
 # Copy package files first for better caching
-COPY package.json bower.json gulpfile.js .eslintrc karma.conf.js .npmrc ./
+COPY package.json gulpfile.js .eslintrc karma.conf.js .npmrc ./
 
 # Configure npm with better settings for Docker builds
 RUN npm config set fetch-timeout 600000 && \
@@ -36,13 +36,12 @@ RUN npm config set fetch-timeout 600000 && \
     npm config set loglevel verbose && \
     npm config set maxsockets 50
 
-# Install global dependencies first with optimizations and progress
-RUN npm install -g bower gulp gulp-cli karma-cli qs --no-audit --no-fund --progress --verbose && \
-    npm link gulp && \
+# Install global dependencies
+RUN npm install -g gulp-cli@latest --legacy-peer-deps && \
     npm cache clean -f
 
-# Install project dependencies with optimizations and progress
-RUN npm install --only=production --no-audit --no-fund --prefer-offline --progress --verbose
+# Install project dependencies with legacy-peer-deps
+RUN npm install --legacy-peer-deps
 
 # AMD64-specific stage
 FROM base AS amd64
@@ -67,9 +66,6 @@ ENV DISPLAY=:99.0
 
 # Copy source code
 COPY . /code/
-
-# Install bower components after source code is copied
-RUN bower install --allow-root
 
 # Set common command and expose port
 CMD ["gulp", "dev:runserver"]

@@ -157,14 +157,14 @@ Fonts
 */
 function fonts() {
     var font = gulp.src([
-            'bower_components/font-awesome/fonts/fontawesome-webfont.*',
-            'bower_components/materialize/fonts/**/*',
+            'node_modules/font-awesome/fonts/fontawesome-webfont.*',
+            'node_modules/materialize-css/fonts/**/*',
             'frontend/src/fonts/*'
         ])
         .pipe(gulp.dest('frontend/dist/fonts/'));
 
     var fontCss = gulp.src([
-            'bower_components/font-awesome/css/font-awesome.css'
+            'node_modules/font-awesome/css/font-awesome.css'
         ])
         .pipe(gulp_if(production, cleanCSS()))
         .pipe(gulp_if(production, rename({ suffix: '.min' })))
@@ -314,8 +314,8 @@ function watch() {
     gulp.watch('frontend/src/css/**/*.scss', css);
     gulp.watch('frontend/src/views/web/**/*.html', html);
     gulp.watch('frontend/src/images/**/*', images);
-    gulp.watch('bower_components/materialize/fonts/**/*', fonts);
-    gulp.watch('bower_components/materialize/fonts/**/*', fonts);
+    gulp.watch('node_modules/materialize-css/fonts/**/*', fonts);
+    gulp.watch('node_modules/materialize-css/fonts/**/*', fonts);
 }
 
 
